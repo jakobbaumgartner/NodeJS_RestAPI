@@ -45,6 +45,10 @@ Defined only for conventions. It is a good practice.
 * Layered System (Server may forward request to other API.)
 * Code on Demand
 
+## Body-Parser
+
+> app.use(bodyParser.json()); // application/json
+
 
 
 
