@@ -11,7 +11,7 @@ Frontend is decoupled from Backend. We just send the content.
 
 We only exchange data not UI.
 
-### Data Formats
+## Data Formats
 
 * HTML
 * Plain Text (Unnecessarily difficult to parse.)
