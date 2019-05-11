@@ -62,11 +62,17 @@ To override it we set some headers:
 
 > app.use((req, res, next) => {
 >    res.setHeader('Access-Control-Allow-Origin', '*');
+
  // ' * ' means access from any client
+
 >    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+
  // we tell client which methods are allowed
+ 
 >    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
  // what headers clients need to send
+
 >    next();
 > });
 
