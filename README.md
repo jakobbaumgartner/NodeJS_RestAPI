@@ -32,7 +32,7 @@ API Endpoints is a combination of METHOD and PATH.
 * PUT (Create resource on server.)
 * PATCH (Update data on server.)
 * DELETE (Delete data on server.)
-* OPTIONS (Automatically sent by browser.)
+* OPTIONS (Automatically sent by browser. Browser sends it in advance or some other client, to check if the used method in the next request send will be allowed.)
 
 Defined only for conventions. It is a good practice. 
 
@@ -49,9 +49,29 @@ Defined only for conventions. It is a good practice.
 
 > app.use(bodyParser.json()); // application/json
 
+## Postman API tool
+
+Is a API development tool, that helps with sending and seeing responses. 
+
+## CORS
+### Cross - Origin Resource Sharing
+
+If client and server run on different domains we have problems. CORS Errors. It doesn't make sense for REST API. So we have to override it. 
+
+To override it we set some headers:
+
+> app.use((req, res, next) => {
+>    res.setHeader('Access-Control-Allow-Origin', '*');
+> // ' * ' means access from any client
+>    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+> // we tell client which methods are allowed
+>    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+> // what headers clients need to send
+>    next();
+> });
 
 
-
+axios is a promise based HTTP client for browser and node.js
 
 
 
