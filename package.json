@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_restapi",
+  "version": "1.0.0",
+  "description": "NodeJS Lection.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakobbaumgartner/NodeJS_RestAPI.git"
+  },
+  "author": "JB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakobbaumgartner/NodeJS_RestAPI/issues"
+  },
+  "homepage": "https://github.com/jakobbaumgartner/NodeJS_RestAPI#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.19.0"
+  }
+}
