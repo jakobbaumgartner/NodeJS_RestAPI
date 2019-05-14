@@ -80,6 +80,30 @@ To override it we set some headers:
 axios is a promise based HTTP client for browser and node.js
 
 
+## Authentification
+
+No sessions, because rest api is stateless. Every request should have all data needed for authentification. 
+
+* We generate token on server and send it to client. 
+	* Signature can only be changed by server.
+* Client attaches token to every subsequent request to server.
+* Token can be checked by server, but is not stored on it.
+
+** Token = JSON Data + Signature **
+
+We are using packet: "jsonwebtoken" . 
+
+www.jwt.io we can see token insides. 
+
+We can send tokens to server by:
+* query parameters (in URL),
+* in headers.
+
+In settings (app.js) we must enable autorization header. Than we can add to requests Authorization header, that we usually make out of two parts:
+
+> Authorization: 'Bearer' + token 
+
+
 
 
 
